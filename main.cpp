@@ -21,5 +21,7 @@ int main(){
 	editor.export_canvas("/dev/null");
 	editor.import_canvas("/dev/null");
 
+	delete editor.new_canvas<Simple_canvas>("NewSimpleCanvas");
+
 	return 0;
 }

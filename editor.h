@@ -27,6 +27,7 @@ public:
 				  << path_from
 				  << std::endl;
 	}
+
 	virtual void import_canvas(const char *path_where){
 		std::cout << "import canvas: "
 				  << canvas->is_name()
@@ -34,6 +35,15 @@ public:
 				  << path_where
 				  << std::endl;
 	}
+
+	template<typename Type, typename... Args>
+	Type* new_canvas(Args... args){
+			auto ptr = new Type(std::forward<Args...>(args...));
+		std::cout << "create canvas : "
+				  << ptr->is_name() << std::endl;
+		return ptr;
+	}
+
 
 	std::unique_ptr<Canvas_interface> canvas;
 	std::unique_ptr<Painter_interface> painter;

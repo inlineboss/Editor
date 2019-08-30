@@ -4,6 +4,9 @@
 
 #include "painter_interface.h"
 
+/**
+ * \brief Простой художник.
+ */
 class Simple_painter: public Painter_interface{
 public:
 

@@ -4,6 +4,9 @@
 #include <iostream>
 #include "figure_interface.h"
 
+/**
+ * Класс квадрата
+ */
 class Square: public Figure_interface{
 public:
 	virtual void draw () override{
@@ -14,6 +17,9 @@ public:
 	}
 };
 
+/**
+ * Класс треугольника
+ */
 class Triangle: public Figure_interface{
 public:
 	virtual void draw () override{
@@ -24,6 +30,9 @@ public:
 	}
 };
 
+/**
+ * Класс линии
+ */
 class Line: public Figure_interface{
 public:
 	virtual void draw () override{

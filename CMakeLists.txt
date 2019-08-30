@@ -6,37 +6,37 @@ else()
     set(VERSION_BUILD 0)
 endif()
 
-project(editor VERSION 0.0.${VERSION_BUILD})
+project(Editor VERSION 0.0.${VERSION_BUILD})
 
-add_executable(editor main.cpp
+add_executable(Editor main.cpp
 	painter_interface.h
 	functional_interface.h
 	figure.h
 	figure_interface.h
 )
 
-set_property(TARGET editor PROPERTY CXX_STANDARD 17)
+set_property(TARGET Editor PROPERTY CXX_STANDARD 17)
 
-set_target_properties(editor PROPERTIES
+set_target_properties(Editor PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
-target_include_directories(editor
+target_include_directories(Editor
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 
 if (MSVC)
-    target_compile_options(editor PRIVATE
+    target_compile_options(Editor PRIVATE
         /W4
     )
 else ()
-    target_compile_options(editor PRIVATE
+    target_compile_options(Editor PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
 
-install(TARGETS editor RUNTIME DESTINATION bin)
+install(TARGETS Editor RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 

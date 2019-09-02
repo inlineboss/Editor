@@ -7,8 +7,9 @@ int main(){
 	Square square;
 	Triangle triangle;
 	Line line;
-	Editor editor(new Simple_canvas("SimpleCanvas"),
-				  new Simple_painter("SimplePainter"));
+
+	Editor editor(std::make_unique <Simple_canvas> ("SimpleCanvas"),
+				  std::make_unique <Simple_painter> ("SimplePainter"));
 
 	editor.draw(square);
 	editor.draw(triangle);

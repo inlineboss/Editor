@@ -12,8 +12,8 @@
  */
 class Editor{
 public:
-	Editor(Canvas_interface * canvas, Painter_interface* painter):
-		canvas(canvas), painter(painter) {}
+	Editor(std::unique_ptr<Canvas_interface> canvas, std::unique_ptr<Painter_interface> painter):
+		canvas(std::move(canvas)), painter(std::move(painter)) {}
 	/**
 	 * \brief Отрисовка
 	 */
@@ -37,7 +37,7 @@ public:
 	 */
 	virtual void export_canvas(const char *path_from){
 		std::cout << "export canvas: "
-				  << canvas->is_name()
+				  << canvas->title()
 				  << " -> "
 				  << path_from
 				  << std::endl;
@@ -50,25 +50,27 @@ public:
 	 */
 	virtual void import_canvas(const char *path_where){
 		std::cout << "import canvas: "
-				  << canvas->is_name()
+				  << canvas->title()
 				  << " <- "
 				  << path_where
 				  << std::endl;
 	}
 
 	/**
-	 * \brief Импорт полотна
+	 * \brief Создание нового полотна
 	 *
-	 * \param args - набор параметро для конструирования объекта
+	 * \param args - Набор параметров для конструирования объекта
+	 *
+	 * \tparam Type - Тип объекта
+	 * \tparam Args - Типы параметров
 	 */
 	template<typename Type, typename... Args>
 	Type* new_canvas(Args... args){
 			auto ptr = new Type(std::forward<Args...>(args...));
 		std::cout << "create canvas : "
-				  << ptr->is_name() << std::endl;
+				  << ptr->title() << std::endl;
 		return ptr;
 	}
-
 
 	std::unique_ptr<Canvas_interface> canvas;
 	std::unique_ptr<Painter_interface> painter;

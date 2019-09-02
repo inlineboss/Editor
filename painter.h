@@ -13,17 +13,17 @@ public:
 	Simple_painter(const char* name): name(name){};
 
 	virtual void draw (Draw_interface& object, Canvas_interface& canvas) override{
-		std::cout << name <<"| " << canvas.is_name() << "| draw -> ";
+		std::cout << name <<"| " << canvas.title() << "| draw -> ";
 		object.draw();
 		canvas.draw();
 	}
 	virtual void remove (Remove_interface& object, Canvas_interface& canvas) override{
-		std::cout << name <<"| " << canvas.is_name() << "| remove -> ";
+		std::cout << name <<"| " << canvas.title() << "| remove -> ";
 		object.remove();
 		canvas.remove();
 	}
 
-	virtual std::string is_name() override{
+	virtual std::string title() override{
 		return {name};
 	}
 

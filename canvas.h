@@ -15,7 +15,7 @@ public:
 		std::cout << "delete" << std::endl;
 	}
 
-	virtual std::string is_name() override{
+	virtual std::string title() override{
 		return {name};
 	}
 

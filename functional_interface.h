@@ -1,6 +1,8 @@
 #ifndef FUNCTIONAL_INTERFACE_H_
 #define FUNCTIONAL_INTERFACE_H_
 
+#include <string>
+
 /**
  * \brief Интерфейс отрисовки
  */
@@ -28,10 +30,10 @@ public:
 /**
  * \brief Интерфейс получения имени
  */
-class Name_interface{
+class Title_interface{
 public:
-	virtual std::string is_name() = 0;
-	virtual ~Name_interface(){};
+	virtual std::string title() = 0;
+	virtual ~Title_interface(){};
 };
 
 #endif /* FUNCTIONAL_INTERFACE_H_ */

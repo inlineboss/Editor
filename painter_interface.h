@@ -6,7 +6,7 @@
 /**
  * \brief Сущность рисования
  */
-class Painter_interface: public Name_interface{
+class Painter_interface: public Title_interface{
 public:
 	/**
 	 * \brief Метод отрисовки

@@ -6,7 +6,7 @@
 
 class Canvas_interface: public Draw_interface,
 						public Remove_interface,
-						public Name_interface{
+						public Title_interface{
 public:
 	virtual ~Canvas_interface(){};
 };

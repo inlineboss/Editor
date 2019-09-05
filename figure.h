@@ -6,7 +6,7 @@
 
 #include <memory>
 
-enum class Figure_ID {
+enum class Figure_ID : std::size_t {
 	square,
 	triangle,
 	line,

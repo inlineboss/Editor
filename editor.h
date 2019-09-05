@@ -2,6 +2,7 @@
 #define EDITOR_H_
 
 #include <memory>
+#include <unordered_map>
 
 #include "canvas_interface.h"
 #include "painter_interface.h"
@@ -73,8 +74,22 @@ public:
 		return std::move(ptr);
 	}
 
+	Figure& new_figure(Figure_ID id){
+
+		auto ptr = Figure::create(id);
+
+		std::cout << "create figure " << std::endl;
+
+		storage[++index_figure] = Figure::create(id);
+
+		return *storage[index_figure];
+	}
+
 	std::unique_ptr<Canvas_interface> canvas;
 	std::unique_ptr<Painter_interface> painter;
+
+	std::unordered_map<std::size_t, std::unique_ptr<Figure>> storage;
+	std::size_t index_figure{0};
 
 	virtual ~Editor(){};
 };

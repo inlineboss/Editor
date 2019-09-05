@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDraw__interface.html" title="Интерфейс отрисовки " alt="" coords="15,157,132,184"/>
+<area shape="rect" id="node2" href="$classCanvas__interface.html" title="Canvas_interface" alt="" coords="189,157,321,184"/>
+<area shape="rect" id="node4" href="$classFigure.html" title="Интерфейс фигуры " alt="" coords="225,107,285,133"/>
+<area shape="rect" id="node3" href="$classSimple__canvas.html" title="Simple_canvas" alt="" coords="369,157,488,184"/>
+<area shape="rect" id="node5" href="$classLine.html" title="Line" alt="" coords="405,5,453,32"/>
+<area shape="rect" id="node6" href="$classSquare.html" title="Square" alt="" coords="395,56,463,83"/>
+<area shape="rect" id="node7" href="$classTriangle.html" title="Triangle" alt="" coords="393,107,464,133"/>
+<area shape="rect" id="node8" href="$classRemove__interface.html" title="Интерфейс удаления " alt="" coords="5,107,141,133"/>
+<area shape="rect" id="node9" href="$classTitle__interface.html" title="Интерфейс получения имени " alt="" coords="18,208,129,235"/>
+<area shape="rect" id="node10" href="$classPainter__interface.html" title="Сущность рисования " alt="" coords="191,208,320,235"/>
+<area shape="rect" id="node11" href="$classSimple__painter.html" title="Простой художник. " alt="" coords="369,208,488,235"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Remove_interface" name="Remove_interface">
+<area shape="rect" id="node2" href="$classCanvas__interface.html" title="Canvas_interface" alt="" coords="16,80,148,107"/>
+<area shape="rect" id="node4" href="$classFigure.html" title="Интерфейс фигуры " alt="" coords="207,80,267,107"/>
+<area shape="rect" id="node3" href="$classSimple__canvas.html" title="Simple_canvas" alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node5" href="$classLine.html" title="Line" alt="" coords="149,155,197,181"/>
+<area shape="rect" id="node6" href="$classSquare.html" title="Square" alt="" coords="221,155,289,181"/>
+<area shape="rect" id="node7" href="$classTriangle.html" title="Triangle" alt="" coords="313,155,384,181"/>
+</map>

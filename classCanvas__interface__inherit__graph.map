@@ -1,0 +1,6 @@
+<map id="Canvas_interface" name="Canvas_interface">
+<area shape="rect" id="node5" href="$classSimple__canvas.html" title="Simple_canvas" alt="" coords="155,155,274,181"/>
+<area shape="rect" id="node2" href="$classDraw__interface.html" title="Интерфейс отрисовки " alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node3" href="$classRemove__interface.html" title="Интерфейс удаления " alt="" coords="147,5,283,32"/>
+<area shape="rect" id="node4" href="$classTitle__interface.html" title="Интерфейс получения имени " alt="" coords="307,5,418,32"/>
+</map>

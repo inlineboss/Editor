@@ -1,0 +1,5 @@
+<map id="Triangle" name="Triangle">
+<area shape="rect" id="node2" href="$classFigure.html" title="Интерфейс фигуры " alt="" coords="109,80,169,107"/>
+<area shape="rect" id="node3" href="$classDraw__interface.html" title="Интерфейс отрисовки " alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node4" href="$classRemove__interface.html" title="Интерфейс удаления " alt="" coords="147,5,283,32"/>
+</map>

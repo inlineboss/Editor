@@ -2,7 +2,6 @@
 #define FIGURE_H_
 
 #include <iostream>
-#include "figure_interface.h"
 #include "functional_interface.h"
 
 #include <memory>
@@ -61,10 +60,18 @@ public:
 	}
 };
 
-std::unique_ptr<Figure> create(Figure_ID id){
+std::unique_ptr<Figure> Figure::create(Figure_ID id){
+
 	switch(id){
-	case Figure_ID::line: return std::make_unique<>();
-	}
+		case Figure_ID::square: return std::make_unique<Square>();
+			break;
+		case Figure_ID::triangle: return std::make_unique<Triangle>();
+			break;
+
+		default: break;
+	};
+
+	return std::make_unique<Line>();
 }
 
 

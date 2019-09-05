@@ -6,6 +6,7 @@
 #include "canvas_interface.h"
 #include "painter_interface.h"
 #include "functional_interface.h"
+#include "figure.h"
 
 /*
  * \brief Редактор
@@ -65,11 +66,11 @@ public:
 	 * \tparam Args - Типы параметров
 	 */
 	template<typename Type, typename... Args>
-	Type* new_canvas(Args... args){
-			auto ptr = new Type(std::forward<Args...>(args...));
+	std::unique_ptr<Type> new_canvas(Args... args){
+			auto ptr = std::make_unique<Type>(std::forward<Args...>(args...));
 		std::cout << "create canvas : "
 				  << ptr->title() << std::endl;
-		return ptr;
+		return std::move(ptr);
 	}
 
 	std::unique_ptr<Canvas_interface> canvas;

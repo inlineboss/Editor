@@ -12,7 +12,6 @@ add_executable(Editor main.cpp
 	painter_interface.h
 	functional_interface.h
 	figure.h
-	figure_interface.h
 )
 
 set_property(TARGET Editor PROPERTY CXX_STANDARD 17)
